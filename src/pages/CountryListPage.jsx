@@ -63,6 +63,7 @@ function CountryListPage() {
             id=""
             onChange={(e) => setSelectedRegion(e.target.value)}
             value={selectedRegion}
+            className="bg-white shadow-[0_2px_9px_rgba(0,0,0,0.0532439)] rounded-[5px] p-2 font-nunito font-normal text-sm text-[#111517]"
           >
             <option value="" disabled selected>
               Filter by Region
@@ -76,12 +77,14 @@ function CountryListPage() {
         </div>
       </div>
       <div>
-        <div className="py-10 container grid grid-cols-4 gap-y-14 ">
+        <div className="pt-10 container flex flex-wrap justify-between w-full">
           {filteredCountry.map((country, index) => (
             <Link
               key={index + 111}
               to={`/country/${country.ccn3}`}
-              className="w-[264px] shadow-[0_0_7px_2px_rgba(0,0,0,0.0294384)] bg-white"
+              className={`w-[264px] shadow-[0_0_7px_2px_rgba(0,0,0,0.0294384)] mb-[70px] bg-white ${
+                index === filteredCountry.length - 1 ? "ml-0" : ""
+              }`}
             >
               <CountryCard country={country} />
             </Link>
@@ -93,3 +96,32 @@ function CountryListPage() {
 }
 
 export default CountryListPage;
+
+/* Rectangle Copy */
+
+// position: absolute;
+// left: 0%;
+// right: 0%;
+// top: 0%;
+// bottom: 75%;
+
+// background: #FFFFFF;
+// box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
+// border-radius: 5px;
+
+/* Filter by Region */
+
+// position: absolute;
+// height: 20px;
+// left: 12%;
+// right: 38.5%;
+// top: calc(50% - 20px/2 - 84px);
+
+// font-family: 'Nunito Sans';
+// font-style: normal;
+// font-weight: 400;
+// font-size: 14px;
+// line-height: 20px;
+// /* identical to box height, or 143% */
+
+// color: #111517;

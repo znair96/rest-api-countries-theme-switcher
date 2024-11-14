@@ -14,7 +14,7 @@ function App() {
           </h2>
         </div>
       </nav>
-      <main className="bg-[#F2F2F2]">
+      <main className="bg-[#F2F2F2] ">
         <div className="container mx-auto pt-10">
           <Outlet />
         </div>

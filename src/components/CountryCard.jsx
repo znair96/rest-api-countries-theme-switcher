@@ -4,7 +4,7 @@ import React from "react";
 function CountryCard({ country }) {
   return (
     <>
-      <div className="w-[267px] h-[160px]">
+      <div className="w-[264px] h-[160px]">
         <img
           src={country.flags.png}
           alt={country.flags.alt}
